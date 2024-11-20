@@ -17,6 +17,7 @@ import org.bukkit.World;
 import org.bukkit.craftbukkit.v1_21_R1.CraftServer;
 import org.bukkit.craftbukkit.v1_21_R1.CraftWorld;
 import org.bukkit.craftbukkit.v1_21_R1.entity.CraftPlayer;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.inventory.ItemStack;
@@ -159,6 +160,11 @@ public final class NPCImpl implements NPC {
     @Override
     public Location getLocation() {
         return craftPlayer.getLocation();
+    }
+
+    @Override
+    public @NotNull EntityType getType() {
+        return EntityType.PLAYER;
     }
 
     @Override

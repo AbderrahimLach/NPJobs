@@ -10,6 +10,7 @@ import com.mojang.authlib.properties.Property;
 import com.mojang.authlib.properties.PropertyMap;
 import dev.directplan.npjobs.Tickable;
 import org.bukkit.Location;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -42,68 +43,75 @@ public interface NPC extends Observable, Tickable {
     String getName();
 
     /**
-     * Gets the location of this npc.
+     * Gets the location of this NPC.
      *
-     * @return location of this npc.
+     * @return location of this NPC.
      */
     Location getLocation();
 
     /**
-     * Gets the skin of this npc.
+     * Gets the type of this NPC.
      *
-     * @return skin of this npc.
+     * @return type of this NPC.
+     */
+    @NotNull EntityType getType();
+
+    /**
+     * Gets the skin of this NPC.
+     *
+     * @return skin of this NPC.
      */
     @Nullable Skin getSkin();
 
     /**
-     * Gets whether this npc has spawned.
+     * Gets whether this NPC has spawned.
      *
-     * @return whether this npc has spawned.
+     * @return whether this NPC has spawned.
      */
     boolean isSpawned();
 
     /**
-     * Gets whether this npc is currently navigating a certain path.
+     * Gets whether this NPC is currently navigating a certain path.
      *
-     * @return whether this npc is currently navigating a certain path.
+     * @return whether this NPC is currently navigating a certain path.
      */
     boolean isNavigating();
 
     /**
-     * Gets whether this npc is currently jumping.
+     * Gets whether this NPC is currently jumping.
      *
-     * @return whether this npc is currently jumping.
+     * @return whether this NPC is currently jumping.
      */
     boolean isJumping();
 
     /**
-     * Sets the skin of this npc to the provided {@code skin}.
+     * Sets the skin of this NPC to the provided {@code skin}.
      *
      * @param skin skin to set.
      */
     void setSkin(@NotNull Skin skin);
 
     /**
-     * Sets the held item of this npc to the specified {@code item}.
+     * Sets the held item of this NPC to the specified {@code item}.
      *
      * @param item item to set.
      */
     void setHeldItem(@NotNull ItemStack item);
 
     /**
-     * Sets whether this npc should be {@code sneaking}.
+     * Sets whether this NPC should be {@code sneaking}.
      *
      * @param sneaking whether to sneak.
      */
     void setSneaking(boolean sneaking);
 
     /**
-     * Makes this npc play a swing animation. Preferably using their main hand.
+     * Makes this NPC play a swing animation. Preferably using their main hand.
      */
     void playSwingAnimation();
 
     /**
-     * Makes this npc jump.
+     * Makes this NPC jump.
      * <p>
      * The jump function is interruptible, which causes the worker to "fly"
      * if triggered repeatedly.
@@ -111,14 +119,14 @@ public interface NPC extends Observable, Tickable {
     void jump();
 
     /**
-     * Teleports this npc to the specified {@code location}.
+     * Teleports this NPC to the specified {@code location}.
      *
      * @param location where to teleport.
      */
     void teleport(@NotNull Location location);
 
     /**
-     * Spawns this npc on the specified {@code location}.
+     * Spawns this NPC on the specified {@code location}.
      *
      * @param location where to spawn.
      */
@@ -134,7 +142,7 @@ public interface NPC extends Observable, Tickable {
     void walkTo(@NotNull Location location, boolean sprinting);
 
     /**
-     * Removes/de-spawns this npc.
+     * Removes/de-spawns this NPC.
      */
     void remove();
 
