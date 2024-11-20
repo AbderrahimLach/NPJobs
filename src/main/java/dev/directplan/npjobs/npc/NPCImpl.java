@@ -1,7 +1,6 @@
 package dev.directplan.npjobs.npc;
 
 import com.mojang.authlib.GameProfile;
-import static java.util.Objects.requireNonNull;
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoRemovePacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerInfoUpdatePacket;
@@ -28,6 +27,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Predicate;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * An internal implementation of {@link NPC}.

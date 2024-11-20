@@ -3,15 +3,16 @@ package dev.directplan.npjobs.job;
 import com.google.common.collect.Streams;
 import dev.directplan.npjobs.keyed.Keyed;
 import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
+import org.jetbrains.annotations.NotNull;
+
 import static org.bukkit.ChatColor.BOLD;
 import static org.bukkit.ChatColor.GOLD;
 import static org.bukkit.ChatColor.GRAY;
 import static org.bukkit.ChatColor.GREEN;
 import static org.bukkit.ChatColor.RED;
 import static org.bukkit.ChatColor.YELLOW;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * @author DirectPlan
