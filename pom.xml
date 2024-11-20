@@ -105,7 +105,7 @@
             <url>https://maven.enginehub.org/repo/</url>
         </repository>
         <repository>
-            <id>CodeMC NMS</id>
+            <id>codemc-nms</id>
             <url>https://repo.codemc.io/repository/nms</url>
         </repository>
     </repositories>
