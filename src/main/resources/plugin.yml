@@ -1,0 +1,8 @@
+name: NPJobs
+version: ${project.version}
+main: dev.directplan.npjobs.NPJPlugin
+api-version: '1.21'
+authors: [ DirectPlan ]
+description: Hire NPC workers to do various jobs such as construction, farming, and guarding.
+softdepend:
+  - WorldEdit
