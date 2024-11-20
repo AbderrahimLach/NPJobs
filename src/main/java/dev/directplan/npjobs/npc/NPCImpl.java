@@ -181,7 +181,7 @@ public final class NPCImpl implements NPC {
     }
 
     /**
-     * Shows this NPC for the given {@code player} or to all online players within view distance range.
+     * Shows this NPC to the given {@code player} or to all online players within view distance range.
      * <p>
      * If the given {@code player} is null, this NPC will be shown to all online players
      * within view distance range.

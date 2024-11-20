@@ -149,7 +149,7 @@ public final class PacketDispatcher {
      */
     @Deprecated(forRemoval = true)
     public void addObserver(@NotNull Player player) {
-        // There's no point to add observers if this instance is inclusive.
+        // There's no point in adding observers if this instance is inclusive.
         Preconditions.checkArgument(exclusive, "Cannot add a player to an inclusive dispatcher");
 
         if (observers == null) observers = Lists.newArrayList();
