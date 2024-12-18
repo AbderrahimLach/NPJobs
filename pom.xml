@@ -6,7 +6,7 @@
 
     <groupId>dev.directplan</groupId>
     <artifactId>npjobs</artifactId>
-    <version>0.1.0-dev</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>NPJobs</name>
