@@ -26,6 +26,10 @@ public final class NPCManagerImpl implements NPCManager {
         plugin.getServer()
                 .getScheduler()
                 .runTaskTimer(plugin, new NPCTickUpdate(this), 1, 1);
+
+        plugin.getServer()
+                .getPluginManager()
+                .registerEvents(new NPCListener(this), plugin);
     }
 
     @Override

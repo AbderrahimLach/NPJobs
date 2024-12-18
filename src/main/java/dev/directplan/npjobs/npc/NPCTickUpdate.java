@@ -3,11 +3,11 @@ package dev.directplan.npjobs.npc;
 /**
  * @author DirectPlan
  */
-class NPCTickUpdate implements Runnable {
+public final class NPCTickUpdate implements Runnable {
 
     private final NPCManager npcManager;
 
-    public NPCTickUpdate(NPCManager npcManager) {
+    NPCTickUpdate(NPCManager npcManager) {
         this.npcManager = npcManager;
     }
 

@@ -30,8 +30,6 @@ public non-sealed class NPJPlugin extends JavaPlugin implements NPJobs {
         PluginUtils.registerCommand(this, "job", new PasteBuildCommand(jobManager));
         PluginUtils.registerCommand(this, "job", new JobCommand(jobManager));
 
-        getServer().getPluginManager().registerEvents(new NPCListener(npcManager), this);
-
         NPJobsProvider.provide(this);
     }
 
